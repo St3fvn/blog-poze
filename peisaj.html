@@ -5,8 +5,42 @@
     <title>Peisaje & Clădiri - Stefan Miscodan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+      .lsgrid{
+        display: grid;
+        grid-template-columns: 500px 500px 500px;
+        grid-template-rows: 300px 300px 300px;
+        justify-content: center;
+        align-items: center;
+      }
+      .lsgrid1{
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 500px;
+        justify-content: center;
+        align-items: center;
+      }
+      .lsgrid img:hover{
+        height:400px;
+        width:600px;
+        z-index: 3;
+      }
+      .lsgrid1 img:hover{
+        height:600px;
+        width:400px;
+        z-index: 3;
+      }
+    </style>
 </head>
 <body>
+  <div class="o-page-loader">
+    <div class="o-page-loader--content">
+        <div class="o-page-loader--spinner"></div>
+        <div class="o-page-loader--message">
+            <span>Se încarcă...</span>
+        </div>
+    </div>
+</div>
     <div class="topnav">
         <a href="index.html">Acasa</a>
         <a href="contact.html">Contacteaza-ma</a>
@@ -15,18 +49,21 @@
       <div class="header">
         <h1>Peisaje & Clădiri</h1>
       </div>
-      <div class="container">
-        <img src="poze/peisaj/poza1.png"><br>
-        <img src="poze/peisaj/poza2.jpg"><br>
-        <img src="poze/peisaj/poza4.jpeg"><br>
-        <img src="poze/peisaj/poza6.jpg"><br>
-        <img src=""><br>
-        <img src=""><br>
-        <img src=""><br>
-        <img src=""><br>
-        <img src=""><br>
-        <img class="imgvertical" src="poze/peisaj/poza3.jpg"><br>
-        <img class="imgvertical" src="poze/peisaj/poza5.jpg"><br>
+      <div class="lsgrid">
+        <img src="poze/peisaj/poza1.png">
+        <img src="poze/peisaj/poza2.jpg">
+        <img src="poze/peisaj/poza4.jpeg">
+        <img src="poze/peisaj/poza6.jpg">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+        <img src="">
+        </div>
+        <div class="lsgrid1">
+        <img class="imgvertical" src="poze/peisaj/poza3.jpg">
+        <img class="imgvertical" src="poze/peisaj/poza5.jpg">
       </div>
+      <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

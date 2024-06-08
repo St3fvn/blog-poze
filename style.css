@@ -24,7 +24,7 @@
     padding-top: 40px;
     text-align: center;
     color: burlywood;
-    font-size: 50px;
+    font-size: 30px;
     padding-block-start: 1cm;
     background: #1abc9c;
   }
@@ -98,6 +98,68 @@
 
 .fa-phone{
   background:greenyellow;
+}
+
+img{
+  transition:ease-in-out 0.3s;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 300px 300px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallerygrid{
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 300px 300px 300px;
+  margin:auto;
+  align-items: center;
+  justify-content: center;
+  height:600px;
+}
+
+.gallerygrid img:hover{
+  width:600px;
+  height:400px;
+  z-index: 3;
+}
+
+.gallerylandscape{
+  display:grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 300px 300px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.gallerylandscape img:hover{
+  width:600px;
+  height:400px;
+  z-index: 3;
+}
+
+.galleryportrait{
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-rows: 500px 500px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height:500px;
+}
+
+.galleryportrait img:hover{
+  width:400px;
+  height:600px;
+  z-index: 3;
 }
 
 .container {
@@ -179,7 +241,80 @@ img {
 }
 
 img {
-  border: 3px solid #555;
+  border: 4px solid #555;
+  border-radius: 6px;
   position: relative;
 }
 
+/* --------------------------------------------------------------------------------------- */
+/* Loader
+/* --------------------------------------------------------------------------------------- */
+
+.o-page-loader {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity .5s;
+  background: #1abc9c;
+  z-index: 999;
+}
+
+.o-page-loader--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.o-page-loader--spinner {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255,255,255);
+  margin: 20px auto;
+  animation: rotate-plane 1.2s infinite ease-in-out;
+  -webkit-animation: rotate-plane 1.2s infinite ease-in-out;
+}
+
+.o-page-loader--message {
+  color: rgb(255,255,255);
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* --------------------------------------------------------------------------- */
+/* Animation - Loading Spinner
+/* --------------------------------------------------------------------------- */
+
+@-webkit-keyframes rotate-plane {
+  0% {
+      -webkit-transform: perspective(120px)
+  }
+  50% {
+      -webkit-transform: perspective(120px) rotateY(180deg)
+  }
+  100% {
+      -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
+  }
+}
+
+@keyframes rotate-plane {
+  0% {
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  }
+  50% {
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  }
+  100% {
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
