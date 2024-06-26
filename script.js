@@ -1,4 +1,3 @@
-
 (function(loader) {
 
     window.addEventListener('beforeunload', function(e) {

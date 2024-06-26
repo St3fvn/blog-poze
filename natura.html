@@ -7,30 +7,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <style>
       .naturegrid1{
-        display: grid;
-        grid-template-rows:300px;
-        grid-template-columns: 500px 500px 500px;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
       }
       .naturegrid2{
-        display: grid;
-        grid-template-rows:300px;
-        grid-template-columns: 500px 500px;
-        justify-content: center;
-        align-items: center;
-      }
-      .naturegrid3{
-        display: grid;
-        grid-template-rows: 500px;
-        grid-template-columns: 300px 300px 300px;
-        justify-content: center;
-        align-items: center;
-      }
-      .naturegrid4{
-        display: grid;
-        grid-template-rows: 500px;
-        grid-template-columns: 300px 300px;
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
       }
@@ -40,16 +24,6 @@
         z-index: 3;
       }
       .naturegrid2 img:hover{
-        width: 600px;
-        height:400px;
-        z-index: 3;
-      }
-      .naturegrid3 img:hover{
-        width: 400px;
-        height:600px;
-        z-index: 3;
-      }
-      .naturegrid4 img:hover{
         width: 400px;
         height:600px;
         z-index: 3;
@@ -77,19 +51,15 @@
         <img src="poze/natura/poza1.jpg">
         <img src="poze/natura/poza2.jpg">
         <img src="poze/natura/poza3.jpg">
-        </div>
-        <div class="naturegrid2">
         <img src="poze/natura/poza4.jpg">
         <img src="poze/natura/poza6.jpg">
-        </div>
-        <div class="naturegrid3">
+        <div class="naturegrid2">
         <img class="imgvertical" src="poze/natura/poza7.jpg">
         <img class="imgvertical" src="poze/natura/poza8.jpg">
         <img class="imgvertical" src="poze/natura/poza9.jpg">
-        </div>
-        <div class="naturegrid4">
         <img class="imgvertical" src="poze/natura/poza10.jpg">
         <img class="imgvertical" src="poze/natura/poza5.jpg">
+        </div>
       </div>
       <script type="text/javascript" src="script.js"></script>
 </body>
